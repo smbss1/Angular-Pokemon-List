@@ -1,0 +1,20 @@
+<input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="&#61442;  Start searching for a hero by id or name or country">
+
+<div *ngFor="let pokemon of pokemons | filter:pokemons"> <!--foreach pokemon in pokemons-->
+  <div id="container">
+    <img src= {{pokemon.img}} >
+
+    <div id="name">
+      <span id="pokemon_id"> {{ pokemon.id }} </span>
+      <span id="pokemon_name"> {{ pokemon.name }} </span>
+    </div>
+
+    <div id="type">
+        <span> Type: </span>
+      <div *ngFor="let type of pokemon.type">
+        <span> - {{ type }} </span>
+      </div>
+    </div>
+
+  </div>
+</div>
